@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Word Generator</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>This is a random word generator.</h1>
+        <p>{{unique_id}}</p>
+        <p>{{counter}}</p>
+        <FORM>
+        {% csrf_token %}
+            <INPUT TYPE="button" onClick="history.go(0)" VALUE="Generate">
+        </FORM>
+        <FORM action = "clearing" method = "POST">
+            {% csrf_token %}
+            <a href="/reset"><button>Reset</button></a>
+        </FORM>
+    </div>
+</body>
+</html>
